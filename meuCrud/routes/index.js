@@ -15,4 +15,28 @@ router.get('/usuarios', (req,res,next)=>{
   )
 })
 
+router.get('/newuser', (req,res,next)=>{
+  res.render('addusuario');
+})
+
+router.post('/adduser', (req,res,next)=>{
+  var db = require('../db');
+  
+  var nome = req.body.inputnome;
+  var funcao = req.body.inputfuncao;
+ 
+  var Users = db.Mongoose.model('dadosPessoais', db.DadoPessoaisSchema, 'dadosPessoais');
+  var user = new Users({_nome: nome, _funcao: funcao});
+  user.save((err)=>{
+    if(err){
+      console.log("Erro! -> "+err.message);
+      return err;
+    }else{
+      console.log("Usuário Salvo");
+      res.redirect("usuarios");
+    }
+  })
+
+})
+
 module.exports = router;
