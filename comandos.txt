@@ -1,0 +1,4 @@
+****Primeiro instalar o express****
+    npm install -g express -generator
+****Criar um projeto de express****
+    express --view=ejs --git meuCrud
