@@ -1,4 +1,10 @@
 ****Primeiro instalar o express****
-    npm install -g express -generator
+    npm i1nstall -g express -generator
 ****Criar um projeto de express****
     express --view=ejs --git meuCrud
+****Dentro da pasta meuCrud****
+    npm install
+    npm install -S mongodb
+    npm install -S mongoose
+
+    mongodb+srv://fonseca:banco123@projetocrud.szhaa.mongodb.net/<dbname>?retryWrites=true&w=majority
