@@ -6,5 +6,4 @@
     npm install
     npm install -S mongodb
     npm install -S mongoose
-
-    mongodb+srv://fonseca:banco123@projetocrud.szhaa.mongodb.net/<dbname>?retryWrites=true&w=majority
+    npm install nodemon --save-dev
