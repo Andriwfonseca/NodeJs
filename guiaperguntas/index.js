@@ -5,13 +5,27 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
+//bodyParser
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+
 //Rotas
 app.get("/", (req, res) =>{
     res.render("index");
     //res.send("teste");
 })
+
 app.get("/perguntar", (req, res)=>{
     res.render("perguntar");
+})
+
+app.post("/salvarpergunta", (req, res)=>{
+    var titulo = req.body.titulo;
+    var descricao = req.body.descricao;
+    
+    console.log(req.body)
+    res.send(titulo);
 })
 
 app.listen(4000, function(erro){

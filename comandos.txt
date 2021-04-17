@@ -7,3 +7,9 @@
     npm install -S mongodb
     npm install -S mongoose
     npm install nodemon --save-dev
+
+***Biblioteca para trabalhar com Banco de dados****
+   npm install --save sequelize
+
+***Mysql***
+   npm install --save mysql2
